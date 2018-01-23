@@ -1,54 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="index.css">
-<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-<link rel="shortcut icon" href="images/calculator.png">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-<body>
-
-<h1>Calculator</h1>
-
-	<!--Creates the whole calculator-->
-	<div class="calculator" id="calculator">
-
-		<!--Contains the resulting value-->
-		<div class="output"> <span id="result">0</span></div>
-
-		<!--Creates the layout for every button-->
-		<div class="button-layout" id="button-layout">
-			<button id="clearAll">AC</button>
-			<button id="backOne">CE</button>
-			<button id="(">(</button>
-			<button id=")">)</button>
-			<br>
-			<button id="7">7</button>
-			<button id="8">8</button>
-			<button id="9">9</button>
-			<button id="*">*</button>
-			<br>
-			<button id="4">4</button>
-			<button id="5">5</button>
-			<button id="6">6</button>
-			<button id="-">-</button>
-			<br>
-			<button id="1">1</button>
-			<button id="2">2</button>
-			<button id="3">3</button>
-			<button id="+">+</button>
-			<br>
-			<button id="0">0</button>
-			<button id=".">.</button>
-			<button id="total">=</button>
-			<button id="%">%</button>
-			<br>
-			
-		</div>
-	</div>
-
 <!--jQuery-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="js/scripts.js"></script>
@@ -102,7 +51,7 @@ function update(){
 //Functions for when a button is clicked
 $("button").click(function(){
 	if(this.id === "clearAll"){
-		input = ["0"];
+		input = [""];
 		update();
 	}else if(this.id === 'backOne'){
 		input.pop();
@@ -123,13 +72,18 @@ $("button").click(function(){
 	}
 });
 
+//work on
+$("#result").keypress(function(event){
+
+	if(event.keyCode == 13){
+		console.log("fsafsaf");
+	}
+
+});
+
+
 
 });
 
 
 </script>
-
-
-</body>
-
-</html>
